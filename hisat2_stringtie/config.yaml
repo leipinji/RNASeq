@@ -1,0 +1,19 @@
+SAMPLE:
+ - KO-1
+ - KO-2
+ - KO-3
+ - KO-1T
+ - KO-2T
+ - KO-3T
+ - WT-1
+ - WT-2
+ - WT-3
+ - WT-1T
+ - WT-2T
+ - WT-3T
+ - KO-3NT
+ - WT-3NT
+
+index: "/data3/leipinji/genome_index/mm10_hisat_index/genome"
+threads: "10"
+gff: "/data3/leipinji/genome_index/mouse_GRCm38_vM17/gencode.vM17.annotation.gff3"
