@@ -27,8 +27,31 @@ options<-add_option(options,
 
 options=parse_args(options)
 
+# count table
 count<-read.table(file=options$count,header=T,row.names = 1,sep = "\t")
+# group factor
 group<-options$group
-group<-unlist(strsplit(group))
+group<-unlist(strsplit(group,split=","))
+# DGE list
+cds<-DGEList(count=count,group = group)
+# data filter
+keep<-rowSums(cpm(cds) >=10) >=2
+cds<-cds[keep,]
+# reset library size
+cds$samples$lib.size<-colSums(cds$counts)
+# normalizing the data
+cds<-calcNormFactors(cds)
+# estimating the dispersion
+cds<-estimateCommonDisp(cds,verbose=T)
+cds<-estimateTagwiseDisp(cds)
+# differential expression analysis
+pair<-unique(group)
+results<-exactTest(cds,pair=pair)
+results_fpkm<-topTags(results,n=length(cds$counts[,1]))
+#results_fpkm<-topTags(results,n=100)
+output_file=paste(c(pair,"gene_expression_pvalue_foldChange.txt"),collapse="_")
+write.table(results_fpkm,file = output_file,sep="\t",col.names = NA,row.names = T,quote = F)
+
+
 
 
