@@ -6,7 +6,7 @@ options<-add_option(options,
 	opt_str = c('-f','--files'),
 	action = 'store',
 	type = 'character',
-	help = 'Htseq-count output files used to merged into a single table')
+	help = 'Htseq-count output files used to merged into a single table, should be seperated by comma')
 options<-add_option(options,
 	opt_str = c('-o','--output'),
 	action = 'store',
