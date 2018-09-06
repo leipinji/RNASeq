@@ -1,0 +1,38 @@
+SAMPLE:
+ - KO-1
+ - KO-2
+ - KO-3
+ - KO-1T
+ - KO-2T
+ - KO-3T
+ - WT-1
+ - WT-2
+ - WT-3
+ - WT-1T
+ - WT-2T
+ - WT-3T
+ - KO-3NT
+ - WT-3NT
+
+# mouse mm10 bowtie2 index
+mm10_bowtie2_index: "/data3/leipingji/genome_index/mm10_hisat_index/genome"
+
+# human hg38 bowtie2 index
+hg38_bowtie2_index: "/data3/leipingji/genome_index/hg38_bowtie2_index/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.bowtie_index"
+
+# human hg19 bowtie2 index
+hg19_bowtie2_index: "/data3/leipingji/genome_index/hg19_bowtie2/hg19"
+
+# human hg38 hisat2 index
+hg38_hisat2_index: "/data3/leipingji/genome_index/hg38_hisat_index/genome"
+
+# mouse mm10 hisat2 index
+mm10_hisat2_index: "/data3/leipingji/genome_index/mm10_hisat_index/genome"
+
+threads: "10"
+
+# mouse mm10 (GRCm38_vM17) gff reference 
+mm10_gff: "/data3/leipingji/genome_index/mouse_GRCm38_vM17/gencode.vM17.annotation.gff3"
+
+# human hg38 (gencode v22) gff reference
+hg38_gff: "/data3/leipingji/genome_index/human_GRCh38_v22/gencode.v22.annotation.gff3"
