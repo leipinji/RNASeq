@@ -17,15 +17,15 @@ if [[ $# -lt 4 ]];then
     exit 0
 fi
 ### quality control of raw data
-#fastqc $R1
-#fastqc $R2
+fastqc $R1
+fastqc $R2
 
 ### raw data filter
 cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT -m 20 -o $R1_cut -p $R2_cut $R1 $R2
 
 ### quality control of clean data 
-#fastqc $R1_cut
-#fastqc $R2_cut
+fastqc $R1_cut
+fastqc $R2_cut
 
 ### clean data compress
 gzip $R1_cut

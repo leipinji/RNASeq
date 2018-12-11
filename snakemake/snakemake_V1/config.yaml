@@ -1,0 +1,33 @@
+SAMPLE:
+- 18111R-02-01_S0_L001
+- 18111R-02-02V_S0_L001
+- 18111R-02-03_S0_L001
+- 18111R-02-04_S0_L001
+- 18111R-02-05_S0_L001
+- 18111R-02-06_S0_L001
+- 18111R-02-07_S0_L001
+- 18111R-02-08_S0_L001
+
+# mouse mm10 bowtie2 index
+mm10_bowtie2_index: "/data3/leipingji/genome_index/mm10_hisat_index/genome"
+
+# human hg38 bowtie2 index
+hg38_bowtie2_index: "/data3/leipingji/genome_index/hg38_bowtie2_index/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.bowtie_index"
+
+# human hg19 bowtie2 index
+hg19_bowtie2_index: "/data3/leipingji/genome_index/hg19_bowtie2/hg19"
+
+# human hg38 hisat2 index
+hg38_hisat2_index: "/data3/leipingji/genome_index/hg38_hisat_index/genome"
+
+# mouse mm10 hisat2 index
+mm10_hisat2_index: "/data/genomeIndex/mm10_hisat2_index/genome"
+
+threads: "4"
+
+# mouse mm10 (GRCm38_vM17) gff reference 
+#mm10_gff: "/data3/leipingji/genome_index/mouse_GRCm38_vM17/gencode.vM17.annotation.gff3"
+mm10_gff: "/data/genomeIndex/Mus_musculus/UCSC/mm10/Annotation/Genes/genes.gtf"
+
+# human hg38 (gencode v22) gff reference
+hg38_gff: "/data3/leipingji/genome_index/human_GRCh38_v22/gencode.v22.annotation.gff3"

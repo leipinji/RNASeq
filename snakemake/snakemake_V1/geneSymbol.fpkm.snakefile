@@ -1,8 +1,8 @@
-configfile: "config.yaml"
+configfile: "snakemake/config.yaml"
 
 rule all:
 	input:
-		expand("fpkm/{sample}.fpkm.txt",dir=config['DIR'],sample=config['SAMPLE']),
+		expand("fpkm/{sample}.fpkm.txt",sample=config['SAMPLE']),
 #		"fpkm/fpkm.count.table.txt"
 
 rule tx_fpkm:
@@ -27,4 +27,4 @@ rule fpkm:
 #	output:
 #		"fpkm/fpkm.count.table.txt"
 #	shell:
-	"merged.htseqCount.R -f {input} -o {output}"
+#	"merged.htseqCount.R -f {input} -o {output}"
