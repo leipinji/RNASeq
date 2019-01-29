@@ -43,6 +43,7 @@ ggplot(GO_top10,aes(x=reorder(Term,pvalue_adj),y=pvalue_adj))+
   geom_segment(aes(x=Term,xend=Term,y=min(pvalue_adj),yend=max(pvalue_adj)),linetype="dashed",size=0.1)+
   xlab("Term")+
   ylab("-log10(Bonferroni Pvalue)")+
+  theme(axis.text=element_text(size=7,color='black'),axis.title=element_text(size=8))+
   coord_flip()
 dev.off()
 

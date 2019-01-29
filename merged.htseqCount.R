@@ -1,5 +1,6 @@
 #!/usr/bin/Rscript
 suppressMessages(library(optparse))
+options(warn=-1)
 
 options<-OptionParser()
 options<-add_option(options,
